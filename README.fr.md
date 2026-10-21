@@ -39,7 +39,7 @@ Ni Android Studio ni Gradle. Sous Ubuntu/Debian :
 
 ```bash
 sudo apt-get install android-sdk-platform-23 aapt dalvik-exchange zipalign apksigner default-jdk
-./build.sh            # → build/AccueilTV.apk
+bash build.sh         # → build/AccueilTV.apk
 ```
 
 La première compilation crée une clé de signature locale (`keystore.jks`, ignorée par git) :

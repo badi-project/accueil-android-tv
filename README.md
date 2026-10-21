@@ -44,7 +44,7 @@ No Android Studio or Gradle needed. On Ubuntu/Debian:
 
 ```bash
 sudo apt-get install android-sdk-platform-23 aapt dalvik-exchange zipalign apksigner default-jdk
-./build.sh            # → build/AccueilTV.apk
+bash build.sh         # → build/AccueilTV.apk
 ```
 
 The first build creates a local signing key (`keystore.jks`, ignored by git). Keep it: Android only
