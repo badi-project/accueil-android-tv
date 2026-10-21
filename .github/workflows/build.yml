@@ -1,0 +1,22 @@
+name: Build APK
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Android build tools (Ubuntu packages)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y android-sdk-platform-23 aapt dalvik-exchange zipalign apksigner
+      - name: Build
+        run: bash build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AccueilTV-apk
+          path: build/AccueilTV.apk
